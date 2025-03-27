@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>500</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>ValArhivater - Архиватор папок</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <widget class="QLabel" name="titleLabel">
+      <property name="font">
+       <font>
+        <pointsize>32</pointsize>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="text">
+       <string>ValArhivater</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QGroupBox" name="archiveGroup">
+      <property name="title">
+       <string>Архивация папки</string>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout_2">
+       <item>
+        <widget class="QPushButton" name="archiveButton">
+         <property name="text">
+          <string>Создать архив из папки</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="archiveStatusLabel">
+         <property name="text">
+          <string>Нажмите кнопку для выбора папки для архивации</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item>
+     <widget class="QGroupBox" name="extractGroup">
+      <property name="title">
+       <string>Распаковка архива</string>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout_3">
+       <item>
+        <widget class="QPushButton" name="extractButton">
+         <property name="text">
+          <string>Распаковать архив</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="extractStatusLabel">
+         <property name="text">
+          <string>Нажмите кнопку для выбора архива и его распаковки</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QStatusBar" name="statusbar">
+   <widget class="QLabel" name="statusLabel">
+    <property name="text">
+     <string>Поддерживаемые форматы: ZIP, TAR, GZ</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui> 
