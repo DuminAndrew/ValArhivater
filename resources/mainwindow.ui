@@ -13,13 +13,16 @@
   <property name="windowTitle">
    <string>ValArhivater - Архиватор папок</string>
   </property>
+  <property name="acceptDrops">
+   <bool>true</bool>
+  </property>
   <widget class="QWidget" name="centralwidget">
    <layout class="QVBoxLayout" name="verticalLayout">
     <item>
      <widget class="QLabel" name="titleLabel">
       <property name="font">
        <font>
-        <pointsize>32</pointsize>
+        <pointsize>16</pointsize>
         <bold>true</bold>
        </font>
       </property>
@@ -38,16 +41,35 @@
       </property>
       <layout class="QVBoxLayout" name="verticalLayout_2">
        <item>
-        <widget class="QPushButton" name="archiveButton">
-         <property name="text">
-          <string>Создать архив из папки</string>
-         </property>
-        </widget>
+        <layout class="QHBoxLayout" name="horizontalLayout">
+         <item>
+          <widget class="QPushButton" name="archiveButton">
+           <property name="text">
+            <string>Создать архив из папки</string>
+           </property>
+           <property name="icon">
+            <iconset resource="icons/icons.qrc">
+             <normaloff>:/icons/archive.png</normaloff>:/icons/archive.png</iconset>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="settingsButton">
+           <property name="text">
+            <string>Параметры</string>
+           </property>
+           <property name="icon">
+            <iconset resource="icons/icons.qrc">
+             <normaloff>:/icons/settings.png</normaloff>:/icons/settings.png</iconset>
+           </property>
+          </widget>
+         </item>
+        </layout>
        </item>
        <item>
         <widget class="QLabel" name="archiveStatusLabel">
          <property name="text">
-          <string>Нажмите кнопку для выбора папки для архивации</string>
+          <string>Перетащите папку сюда или нажмите кнопку для выбора папки</string>
          </property>
          <property name="alignment">
           <set>Qt::AlignCenter</set>
@@ -68,12 +90,16 @@
          <property name="text">
           <string>Распаковать архив</string>
          </property>
+         <property name="icon">
+          <iconset resource="icons/icons.qrc">
+           <normaloff>:/icons/extract.png</normaloff>:/icons/extract.png</iconset>
+         </property>
         </widget>
        </item>
        <item>
         <widget class="QLabel" name="extractStatusLabel">
          <property name="text">
-          <string>Нажмите кнопку для выбора архива и его распаковки</string>
+          <string>Перетащите архив сюда или нажмите кнопку для выбора архива</string>
          </property>
          <property name="alignment">
           <set>Qt::AlignCenter</set>
@@ -88,7 +114,7 @@
   <widget class="QStatusBar" name="statusbar">
    <widget class="QLabel" name="statusLabel">
     <property name="text">
-     <string>Поддерживаемые форматы: ZIP, TAR, GZ</string>
+     <string>Поддерживаемые форматы: ZIP, TAR, GZ, RAR</string>
     </property>
     <property name="alignment">
      <set>Qt::AlignCenter</set>
@@ -96,6 +122,8 @@
    </widget>
   </widget>
  </widget>
- <resources/>
+ <resources>
+  <include location="icons/icons.qrc"/>
+ </resources>
  <connections/>
 </ui> 

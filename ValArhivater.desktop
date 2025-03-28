@@ -1,0 +1,17 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=ValArhivater
+Comment=Архиватор папок
+Exec=ValArhivater %f
+Icon=ValArhivater
+Terminal=false
+Categories=Utility;Archiving;
+MimeType=application/zip;application/x-tar;application/gzip;application/x-7z-compressed;application/x-rar-compressed;
+Actions=ExtractHere;ExtractTo;
+[Desktop Action ExtractHere]
+Name=Распаковать сюда
+Exec=ValArhivater --extract-here %f
+[Desktop Action ExtractTo]
+Name=Распаковать в...
+Exec=ValArhivater --extract-to %f 

@@ -15,11 +15,13 @@ set(SOURCES
     src/main.cpp
     src/mainwindow.cpp
     src/archiver.cpp
+    src/settingsdialog.cpp
 )
 
 set(HEADERS
     include/mainwindow.h
     include/archiver.h
+    include/settingsdialog.h
 )
 
 set(UI_FILES
@@ -28,6 +30,7 @@ set(UI_FILES
 
 set(RESOURCES
     resources/icons/icons.qrc
+    resources/extractor/extractor.qrc
 )
 
 add_executable(${PROJECT_NAME}
@@ -48,4 +51,19 @@ target_link_libraries(${PROJECT_NAME} PRIVATE
 
 set_target_properties(${PROJECT_NAME} PROPERTIES
     AUTOUIC_SEARCH_PATHS ${CMAKE_CURRENT_SOURCE_DIR}/resources
+)
+
+# Установка
+install(TARGETS ${PROJECT_NAME}
+    RUNTIME DESTINATION bin
+    BUNDLE DESTINATION bin
+)
+
+install(FILES ${CMAKE_CURRENT_SOURCE_DIR}/ValArhivater.desktop
+    DESTINATION share/applications
+)
+
+install(FILES ${CMAKE_CURRENT_SOURCE_DIR}/resources/icons/ValArhivater.png
+    DESTINATION share/icons/hicolor/256x256/apps
+    RENAME ${PROJECT_NAME}.png
 ) 

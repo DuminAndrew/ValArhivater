@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RCC>
+    <qresource prefix="/extractor">
+        <file>extractor</file>
+        <file>sfx.sh</file>
+    </qresource>
+</RCC> 
