@@ -117,7 +117,7 @@ bool Archiver::archiveFile(const QString& sourcePath, const QString& destination
     archive_write_close(a);
     archive_write_free(a);
 
-    // Если требуется создать самораспаковывающийся архив
+    // Если требуется создать самораспаковывающийся архив - исправь работу функции 
     if (selfExtracting) {
         QString extractorPath = QCoreApplication::applicationDirPath() + "/extractor";
         QFile::copy(":/extractor/extractor", extractorPath);
